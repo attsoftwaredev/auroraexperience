@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "visual-editor";
+  src:url("../icons/visual-editor.eot");
+  src:url("../icons/visual-editor.eot?#iefix") format("embedded-opentype"),
+    url("../icons/visual-editor.woff") format("woff"),
+    url("../icons/visual-editor.ttf") format("truetype"),
+    url("../icons/visual-editor.svg#visual-editor") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "visual-editor" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "visual-editor" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-one-col:before {
+  content: "\61";
+}
+.icon-two-cols:before {
+  content: "\62";
+}
+.icon-three-cols:before {
+  content: "\63";
+}
+.icon-button:before {
+  content: "\64";
+}
+.icon-newsletter:before {
+  content: "\65";
+}
+.icon-media:before {
+  content: "\66";
+}
+.icon-text:before {
+  content: "\67";
+}
+.icon-table:before {
+  content: "\68";
+}
+.icon-map:before {
+  content: "\69";
+}
+.icon-widget:before {
+  content: "\6a";
+}
+.icon-shortcode:before {
+  content: "\6b";
+}
+.icon-icons:before {
+  content: "\6c";
+}
+.icon-sidebar:before {
+  content: "\6d";
+}
+.icon-carousel:before {
+  content: "\6e";
+}
+.icon-tabs:before {
+  content: "\6f";
+}
+.icon-html:before {
+  content: "\71";
+}
+.icon-pre-designed:before {
+  content: "\72";
+}

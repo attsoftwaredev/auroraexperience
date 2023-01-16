@@ -1,0 +1,28 @@
+/**
+ * Javascript functionality for Premise Membership checkout form.
+ *
+ * @since
+ */
+
+jQuery(document).ready(function(){
+
+    jQuery('.accesspress-checkout-form-account input:visible[id!="accesspress-checkout-url"]').attr('required','required');
+    jQuery('.accesspress-checkout-form-account #taxamo-vat').removeAttr('required');
+
+    if (jQuery('#accesspress-checkout-password').length) {
+        var password = document.getElementById('accesspress-checkout-password'),
+            confirm_password = document.getElementById('accesspress-checkout-password-repeat');
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    }
+
+});

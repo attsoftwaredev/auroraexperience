@@ -1,0 +1,17 @@
+.site-footer .creds {
+display:none
+}
+
+a.more-link,.more-from-category a {
+margin:10px 0 10px auto
+}
+
+li a.icon-search:before {
+font-family:'dashicons'!important;
+font-size:16px;
+content:'\f179'
+}
+
+.genesis-nav-menu a.icon-search {
+padding:20px 10px
+}

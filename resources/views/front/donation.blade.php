@@ -1,0 +1,760 @@
+@includeIf('front.themes.custom-theme.header')
+
+<section id="donationBanner">
+    <form id="signUpForm" action="donation-payment">
+        <!-- start step indicators -->
+        <div class="form-header d-flex mb-4">
+            <span class="stepIndicator"></span>
+            <span class="stepIndicator"></span>
+        </div>
+        <!-- end step indicators -->
+    
+        @foreach($onetime as $onetimes)
+        
+        @endforeach
+        
+        @foreach($monthly as $monthlys)
+        
+        @endforeach
+        <!-- step one -->
+        <div class="step">
+        <ul class="nav nav-tabs d-lg-flex design_li" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">RESCUE PARTNER MONTHLY GIVING</button>
+          </li>
+          <li class="nav-item" role="presentation">
+             <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">ONE TIME FUND</button>
+          </li>
+         </ul>
+        <div class="tab-content accordion" id="myTabContent">
+
+         <div class="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+    <div id="collapseOne" class="accordion-collapse collapse show  d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
+      <div class="accordion-body">
+      <div class="col-md-12">
+              <p class="fw-bold fs-4 text-black">Donation Amount:<p>
+              
+            </div> 
+            <div class="row">
+            <div class="col-md-2 mb-lg-5">
+            <input type="radio" name="donation_amount" id="amount{{ $onetimes->firstamount }}" value="{{ $onetimes->firstamount }}"/>
+             <label for="amount{{ $onetimes->firstamount }}">${{ $onetimes->firstamount }}</label>
+            </div>
+            <div class="col-md-2 mb-lg-5">
+            <input type="radio" name="donation_amount" id="amount{{ $onetimes->secondamount }}" value="{{ $onetimes->secondamount }}"/>
+             <label for="amount{{ $onetimes->secondamount }}">${{ $onetimes->secondamount }}</label>
+            </div>
+            <div class="col-md-2 mb-lg-5">
+            <input type="radio" name="donation_amount" id="amount{{ $onetimes->thirdamount }}" value="{{ $onetimes->thirdamount }}"/>
+             <label for="amount{{ $onetimes->thirdamount }}">${{ $onetimes->thirdamount }}</label>
+            </div>
+            <div class="col-md-6 mb-lg-5">
+            <input type="radio" name="donation_amount" id="rescue_child" value="{{ $onetimes->fourthamount }}"/>
+             <label for="rescue_child">${{ $onetimes->fourthamount }} Rescues a Child</label>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+      <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+    <div id="collapseTwo" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
+      <div class="accordion-body">
+      <div class="col-md-12">
+              <p class="fw-bold fs-4 text-black">Monthly Donation Amount:<p>
+                  
+            </div> 
+            <div class="row">
+            <div class="col-md-2 mb-lg-5">
+            <input type="radio" name="donation_amount" id="monthly_amount{{ $monthlys->firstamount }}" value="{{ $monthlys->firstamount }}"/>
+             <label for="monthly_amount{{ $monthlys->firstamount }}">${{ $monthlys->firstamount }}</label>
+            </div>
+            <div class="col-md-2 mb-lg-5">
+            <input type="radio" name="donation_amount" id="monthly_amount{{ $monthlys->secondamount }}" value="{{ $monthlys->secondamount }}"/>
+             <label for="monthly_amount{{ $monthlys->secondamount }}">${{ $monthlys->secondamount }}</label>
+            </div>
+            <div class="col-md-2 mb-lg-5">
+            <input type="radio" name="donation_amount" id="monthly_amount{{ $monthlys->thirdamount }}" value="{{ $monthlys->thirdamount }}"/>
+             <label for="monthly_amount{{ $monthlys->thirdamount }}">${{ $monthlys->thirdamount }}</label>
+            </div>
+            <div class="col-md-6 mb-lg-5">
+            <input type="radio" name="donation_amount" id="monthly_rescue_child" value="{{ $monthlys->fourthamount }}"/>
+             <label for="monthly_rescue_child">${{ $monthlys->fourthamount }} Rescues a Child</label>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+        </div>
+    
+        
+         <div class="step">
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="credit-tab" data-bs-toggle="tab" data-bs-target="#credit-tab-pane" type="button" role="tab" aria-controls="credit-tab-pane" aria-selected="true">CREDIT CARD</button>
+  </li>
+</ul>
+<div class="tab-content accordion" id="myTabContent">
+  <div class="tab-pane fade show active accordion-item" id="credit-tab-pane" role="tabpanel" aria-labelledby="credit-tab" tabindex="0">
+    <div id="collapseOne" class="accordion-collapse collapse show  d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
+      <div class="accordion-body">
+      <div class="col-md-12 secondForm">
+             <label>Name on Card*</label>
+                <input type="text" value="" name="name_card" required>
+            </div>
+            <p id="hidden_field"></p> 
+            <div class="col-md-12">
+            <input class="toggle-box" id="identifier-1" type="checkbox">
+            <label for="identifier-1" class="link"><i class="bi bi-caret-right-fill"></i> Leave a note:</label>
+            </input>
+            <div class="hidden-input">
+            <textarea id="donation-notes" name="donation_note" rows="4"></textarea>
+             </div>
+            </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+    
+        <!-- start previous / next buttons -->
+        <div class="row form-footer">
+          <div class="col-md-6">
+            <input type="text" id="amount_text"  class="add_icon_front" name="amount_text">
+            <span id="usd">USD</span>
+            <p id="giving_amount">Giving $<span>1500</span></p>
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">(edit amount)</button>
+           </div> 
+           <div class="col-md-6"> 
+            <p style="background: #D62626;padding: 15px 16px;color: #fff;font-size: 22px;text-align: center;" id="nextBtn" onclick="nextPrev(1)" class="w-100">Next</p>
+            
+          </div> 
+        </div>
+        <!-- end previous / next buttons -->
+    </form> 
+    </section>  
+
+
+   <section class="p-5">
+    <div class="container">
+      <h2 class="fw-normal text-center fs-1">Meaningful Ways to Give</h2>
+      <hr style="width:10%;border:2px solid #D62626;margin:30px auto;opacity:1;background:#D62626;">
+    
+      <div class="row py-4" id="meaning-way-card">
+        <div class="col-lg-4 col-md-12 mb-3">
+           <div class="card mx-3 h-100">
+           <img class="card-img-top" src="{{ asset('resources/views/front/themes/custom-theme/images/portal-giving-rescue-partner.jpg') }}" alt="portal-giving-rescue-partner">
+           <div class="card-body">
+           <h3 class="text-center fw-bold fs-3">Fund a Rescue</h3>
+           <hr style="width:15%;border:1px solid #D62626;margin:30px auto 60px;opacity:1;background:#D62626;">
+           <p class="card-text px-4 text-center py-3">Help rescue children out of slavery and give them the care they need.</p>
+           </div>
+        </div>
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-12 mb-3">
+           <div class="card mx-3 h-100">
+           <img class="card-img-top" src="{{ asset('resources/views/front/themes/custom-theme/images/portal-giving-fund-rescue.jpg') }}" alt="portal-giving-fund-rescue">
+           <div class="card-body">
+           <h3 class="text-center fw-bold fs-3">Rescue Partner</h3>
+           <hr style="width:15%;border:1px solid #D62626;margin:30px auto 60px;opacity:1;background:#D62626;">
+           <p class="card-text px-4 text-center py-3">Help provide freedom and empower bright and safe futures.</p>
+           </div>
+        </div>
+            </div>
+
+        <div class="col-lg-4 col-md-12 mb-3">
+           <div class="card mx-3 h-100">
+           <img class="card-img-top" src="{{ asset('resources/views/front/themes/custom-theme/images/portal-giving-help-her-stay-free.jpg') }}" alt="portal-giving-help-her-stay-free">
+           <div class="card-body">
+           <h3 class="text-center fw-bold fs-3">Help Her Stay Free</h3>
+           <hr style="width:15%;border:1px solid #D62626;margin:30px auto 60px;opacity:1;background:#D62626;">
+           <p class="card-text px-4 text-center py-3">Help a child stay free to pursue her dreams by helping to fund her path to freedom.</p>
+           </div>
+        </div>
+    </div>  
+   </section> 
+
+
+   <section class="py-5" id="donate-confidence" style="background-color:#e8e8e8">
+    <div class="container py-5">
+      <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <h3>Donate with confidence</h3>
+        <h4 class="fw-bold" style="color: #e26826;">Over the last three years, 80.4% of every dollar we spent was used for programs that benefit the children we defend.</h4>
+        <p class="fs-4">Destiny Rescue is recognized by Guidestar, Charity Navigator and the Better Business Bureau for our commitment to transparency, accountability and financial integrity.</p>
+        <ul>
+          <li><img src="{{ asset('resources/views/front/themes/custom-theme/images/badge-1.png') }}"></li>
+          <li><img src="{{ asset('resources/views/front/themes/custom-theme/images/badge-2.png') }}"></li>
+          <li><img src="{{ asset('resources/views/front/themes/custom-theme/images/badge-3.png') }}"></li>
+        </ul>  
+      </div>  
+      
+      <div class="col-lg-6 col-md-12">
+        <img src="{{ asset('resources/views/front/themes/custom-theme/images/pie-chart.png') }}" class="w-75 mx-auto chartImg">
+        <h5 class="text-left">We are grateful for your generosity and promise to use your donation in the most effective way possible. All donations designated for specific funds will be applied to those projects and to administering the gifts. At least 80 percent of your designated gift will go to programs that defend kids. Gifts that cannot be used for a particular project, due to over or under-funding, will be directed to Destiny Rescue’s most urgent needs. Contributions are solicited with the understanding that Destiny Rescue has control over the use of all donated funds.</h5>
+      </div> 
+    </div>
+    </div>  
+   </section> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+        
+        function showTab(n) {
+          // This function will display the specified tab of the form...
+          var x = document.getElementsByClassName("step");
+          x[n].style.display = "block";
+          //... and fix the Previous/Next buttons:
+          if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+          } else {
+            document.getElementById("prevBtn").style.display = "inline";
+          }
+          if (n == 0) {
+            document.getElementById("amount_text").style.display = "inline";
+          } else {
+            document.getElementById("amount_text").style.display = "none";
+          }
+           if (n == 0) {
+            document.getElementById("usd").style.display = "inline";
+          } else {
+            document.getElementById("usd").style.display = "none";
+          }
+          if (n == 0) {
+            document.getElementById("giving_amount").style.display = "none";
+          } else {
+            document.getElementById("giving_amount").style.display = "block";
+          }
+          if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "<input style='background: #D62626;border: 0px;color: #fff;' type='submit' name='submit_donation' value='Give Freedom'>";
+          } else {
+            document.getElementById("nextBtn").innerHTML = "Give Freedom";
+          }
+          //... and run a function that will display the correct step indicator:
+          fixStepIndicator(n)
+        }
+        
+        function nextPrev(n) {
+          // This function will figure out which tab to display
+          var x = document.getElementsByClassName("step");
+          // Exit the function if any field in the current tab is invalid:
+          if (n == 1 && !validateForm()) return false;
+          // Hide the current tab:
+          x[currentTab].style.display = "none";
+          // Increase or decrease the current tab by 1:
+          currentTab = currentTab + n;
+          // if you have reached the end of the form...
+          if (currentTab >= x.length) {
+            // ... the form gets submitted:
+            document.getElementById("signUpForm").submit();
+            return false;
+          }
+          // Otherwise, display the correct tab:
+          showTab(currentTab);
+        }
+        
+        function validateForm() {
+          // This function deals with validation of the form fields
+          var x, y, i, valid = true;
+          x = document.getElementsByClassName("step");
+          y = x[currentTab].getElementsByTagName("input");
+          // A loop that checks every input field in the current tab:
+          for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+            if (y[i].value == "") {
+              // add an "invalid" class to the field:
+              y[i].className += " invalid";
+              // and set the current valid status to false
+              valid = false;
+            }
+          }
+          // If the valid status is true, mark the step as finished and valid:
+          if (valid) {
+            document.getElementsByClassName("stepIndicator")[currentTab].className += " finish";
+          }
+          return valid; // return the valid status
+        }
+        
+        function fixStepIndicator(n) {
+          // This function removes the "active" class of all steps...
+          var i, x = document.getElementsByClassName("stepIndicator");
+          for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+          }
+          //... and adds the "active" class on the current step:
+          x[n].className += " active";
+        }
+        </script>
+        <script>
+            $( document ).ready(function() {
+                $("#home-tab").click();
+            });
+            
+        </script>
+        <script>
+          $('#profile-tab,#home-tab').click(function(){
+             
+            var text_button = this.innerText;
+            
+            if(text_button  == 'ONE TIME FUND'){
+                document.getElementById("hidden_field").innerHTML = "<input type='hidden' name='type_amount' value='once'/>";
+            }else{
+                document.getElementById("hidden_field").innerHTML = "<input type='hidden' name='type_amount' value='monthly'/>";
+            }
+            
+            
+            $("#amount_text").prop('value','');
+            $("input[name='donation_amount']").prop('checked','false');
+            $("input[name='monthly_donation_amount']").prop('checked','false');
+          });
+          
+            let radioBtns = document.querySelectorAll("input[name='donation_amount']");
+            let radioBtns1 = document.querySelectorAll("input[name='monthly_donation_amount']");
+           let amountText = document.getElementById("amount_text");
+           let givingText = document.getElementById("giving_amount");
+           
+            let findSelectedamount = () => {
+                let selectedAmount = document.querySelector("input[name='donation_amount']:checked").value;
+               
+                
+                givingText.textContent='Giving $ ' + selectedAmount;
+                amountText.value=selectedAmount;
+                
+            
+             
+
+
+
+             }
+              let findSelectedamount1 = () => {
+                  let selectedAmount1 = document.querySelector("input[name='monthly_donation_amount']:checked").value;
+                  givingText.textContent='Giving ' + selectedAmount1;
+                amountText.value=selectedAmount1;
+                }
+
+
+
+           radioBtns.forEach(radioBtn =>{
+
+
+
+
+                radioBtn.addEventListener("change",findSelectedamount);
+
+
+
+           });
+            radioBtns1.forEach(radioBtn1 =>{
+
+
+
+
+                radioBtn1.addEventListener("change",findSelectedamount1);
+
+
+
+           });
+           
+
+
+
+           
+          findSelectedamount();
+
+
+
+        findSelectedamount1();
+        </script>
+        
+<style>
+.design_li li {
+    width: 45%;
+display: flex !important;
+}
+.design_li li button {
+    font-size: 12px !important;
+}
+.add_icon_front
+{
+    padding-left: 25px !important;
+    background: url(https://auroraexperiences.gigvie.com/public/5a37e08e2d0c60.6397502915136114061845.png) no-repeat left;
+    background-size: 20px;
+}
+    /***Donation***/
+section#donationBanner {
+    background: url({{ asset('resources/views/front/themes/custom-theme/images/donation.jpg') }});
+    padding:50px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: -75px;
+}
+#signUpForm {
+    width: 50%;
+    background-color: #ffffff;
+    margin: 90px 0px 0px;
+    padding: 40px;
+    box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
+    border-radius: 12px;
+}
+#signUpForm .form-header {
+    gap: 5px;
+    font-size: .9em;
+}
+/* #signUpForm .form-header .stepIndicator {
+    position: relative;
+    flex: 1;
+    padding-bottom: 30px;
+}
+#signUpForm .form-header .stepIndicator::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #ecf5f4;
+}
+#signUpForm .form-header .stepIndicator.active::before {
+    border: 3px solid #D62626;
+}
+#signUpForm .form-header .stepIndicator.finish::before {
+    border: 3px solid #5db855;
+    background: #5db855;
+    background-image: url(./images/check-white.png) !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+}
+#signUpForm .form-header .stepIndicator.active::after {
+    background-color: #eaeaea;
+}
+#signUpForm .form-header .stepIndicator::after {
+    content: "";
+    position: absolute;
+    left: 67%;
+    bottom: 15px;
+    width: 70%;
+    height: 6px;
+    background-color: #f3f3f3;
+}
+#signUpForm .form-header .stepIndicator:last-child:after {
+    display: none;
+} */
+#signUpForm input {
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+}
+
+
+#signUpForm input.invalid {
+    border: 1px solid #ffaba5;
+}
+#signUpForm .step {
+  display: none;
+}
+#signUpForm .form-footer button {
+    background-color: #D62626;
+    color: #ffffff;
+    border: none;
+    padding: 18px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 1;
+    font-weight: 500;
+    margin-top: 10px;
+}
+input#amount_text {
+      border: 0px;
+    border-bottom: 2px solid #000;
+    border-radius: 0px;
+    font-size: 40px;
+    padding: 0px;
+}
+#signUpForm .form-footer button:hover {
+  opacity: 0.8;
+}
+ span#usd {
+    color: #000;
+    font-size: 25px;
+    position: relative;
+    top: -45px;
+    left: 80%;
+}
+#signUpForm .form-footer #prevBtn {
+    background-color: #fff;
+    color: #D62626;
+    padding: 0px;
+    font-size: 25px;
+    font-weight: normal;
+    margin:0px;
+}
+.step input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  
+  .step label {
+    width:100%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: #212222;
+    opacity: .3;
+    padding: 15px 20px;
+    border-radius: 3px;
+    border: 2px solid #979797;
+    font-weight: 600;
+    font-size: 15px;
+}
+input[type="radio"]:checked + label {
+    background-color: #D62626;
+    opacity: 1;
+    color: #fff;
+    border: 2px solid #D62626;
+}
+input:focus
+{
+    border:0px;
+    outline:0px;
+}
+.secondForm label {
+    border: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000 !important;
+    opacity: 1;
+    text-align:left;
+}
+.secondForm input {
+    border: 2px solid rgba(33,34,34,.25) !important;
+    border-radius: 3px;
+    padding: 8px 5px !important;
+}
+p#giving_amount {
+    text-align: left;
+    font-size: 20px;
+    padding: 8px 0 0;
+    margin: 0px;
+}
+select#billing_country {
+    width: 100%;
+    height: 43px;
+    border-radius: 3px;
+    border: 2px solid rgba(33,34,34,.25) !important;
+}
+div#card-element {
+    border: 2px solid rgba(33,34,34,.25) !important;
+    border-radius: 3px;
+    padding: 12px 5px !important;
+    margin: 18px 0;
+}
+label.link {
+    border: 0px;
+    text-align: left;
+    font-size: 26px;
+    padding: 0px;
+    color: #000;
+    opacity: 1;
+    font-weight:normal;
+}
+.toggle-box + label + .hidden-input {
+    display: none; 
+  }
+  .toggle-box {
+    display: none;
+  }
+  .toggle-box:checked + label + .hidden-input {
+    display: block; 
+  }
+  textarea#donation-notes {
+    width: 100%;
+    border: 2px solid rgba(33,34,34,.25) !important;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+div#meaning-way-card .card-body p {
+    font-weight: 300;
+    font-size: 25px !important;
+}
+div#meaning-way-card .card-body{
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+div#meaning-way-card img.card-img-top
+{
+    border-radius:0px;
+}
+div#meaning-way-card .card
+{
+  border-top:10px solid #D62626 !important;
+  cursor: pointer;
+  border:0px;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 31%);
+  border-radius:0px;
+}
+div#meaning-way-card .card-body::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: transparent transparent #fff transparent;
+    display: inline-block;
+    margin: 0px auto;
+    vertical-align: middle;
+    position: relative;
+    top: -37px;
+    left: 43%;
+}
+div#meaning-way-card .card:hover {
+    top: -10px;
+    background: #fcd9bc;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+section#donate-confidence h3 {
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+section#donate-confidence h4 {
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+section#donate-confidence ul li {
+    display: inline-block;
+    list-style: none;
+    text-align: left;
+    padding: 0px 0px;
+    margin: 0 10px;
+}
+section#donate-confidence ul {
+    padding: 0px;
+}
+section#donate-confidence h5 {
+    text-align: left;
+    padding: 24px 0;
+    font-size: 15px;
+    line-height: 25px;
+}
+.step .nav-link.active {
+    background-color: #D62626 !important;
+    opacity: 1;
+    color: #fff;
+    border: 2px solid #D62626 !important;
+}
+.step .nav-link {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: #212222;
+    opacity: .3;
+    padding: 15px;
+    border-radius: 3px;
+    border: 2px solid #979797 !important;
+    font-weight: 600;
+    font-size: 15px;
+    width: 310px;
+    text-transform:uppercase;
+}
+.step .nav-link:hover {
+    color: #D62626 !important;
+}
+ul#myTab li {
+    padding: 0px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+ul#myTab li:last-child
+{
+    margin: 0px auto;
+}
+.nav-tabs, .accordion-item
+{
+    border: 0px ;
+}
+div#myTabContent .accordion-body {
+    padding: 25px 0 15px;
+}
+.secondForm input, .secondForm select {
+    padding: 8px 5px !important;
+    width: 100%;
+    font-size: 1em;
+    border: 2px solid rgba(33,34,34,.25) !important;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    form#signUpForm
+    {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #signUpForm .form-header .stepIndicator::before {
+        width: 20px;
+        height: 20px;
+    }
+    section#donationBanner
+    {
+        padding:20px;
+    }
+    ul#myTab li {
+    margin: 0 auto 20px !important;
+}
+.step .collapse:not(.show)
+{
+    display:block;
+}
+    #signUpForm .form-header .stepIndicator::after {
+        bottom: 8px;
+        width: 81%;
+        height: 3px;
+    }
+    img.chartImg {
+    width: 100% !important;
+    padding: 30px !important;
+}
+
+    
+}
+</style>        
+        
+
+@includeIf('front.themes.custom-theme.footer')

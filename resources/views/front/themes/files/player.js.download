@@ -1,0 +1,117 @@
+jQuery(document).ready(function($) {
+
+	$('.share-button').click( function(){
+		
+		if ( $( this ).is( ".closed" ) ) {			
+			$(this).next('.audio-share').fadeIn();
+			$(this).removeClass('closed').addClass('opened').html('close');		
+		} else {			
+			$(this).next('.audio-share').fadeOut();
+			$(this).removeClass('opened').addClass('closed').html('share');			
+		}
+		
+	});
+	
+	$('.rm-player .audio-share .share-player-share').removeClass('share-tall').removeClass('share-medium').addClass('share-small');
+	
+	$('audio').on('play', function(e) { 
+		var time;
+		
+		if ($('audio').length > 1) {
+			time = $('audio')[$(this).attr('id').split("-")[2] - 1].currentTime;
+		}
+		else {
+			time = $('audio')[0].currentTime;
+		}
+		
+		if (time < 0.1) {
+			PodcastAnalytics.track('Play', podcastTitle($(this)), null, podcastId($(this)));
+			console.log('podcast-play: ' + podcastTitle($(this)));
+		}
+	});
+	
+	$('audio').on('ended', function(e) { 
+		PodcastAnalytics.track('Complete', podcastTitle($(this)), null, podcastId($(this)));	
+		console.log('podcast-complete');
+	});	
+	
+	$(window).on('beforeunload', function() {
+
+		var players = $('audio');
+		
+		$.each(players, function(idx, val) {
+			var time = val.currentTime;
+			if (time !== 0) {
+				ptitle = $(val).parents('.mejs-container[data-title]').first().attr('data-title');
+				pid = $(val).parents('.mejs-container[data-id]').first().attr('data-id');
+				
+				var log_params = { id: pid, action: 'podcast-stopped', time: Math.round(time) };
+				
+				jQuery.ajax({
+			        type: 'POST',
+			        async: false,
+			        url: ss_podcasting_scripts['ajaxurl'] + '?action=rm_podcast_log_action', 
+			        data: { data : log_params },
+			        //success: function(data) { console.log( 'success' ); },
+			        error: function(xhr, ajaxOptions, thrownError) { console.log('error: ' + thrownError); } 	        
+			    });
+					
+				// google analytics
+				if (typeof(ga) == 'function') {		
+					if (time != null) {
+						ga('send', 'event', 'podcast', 'Stopped', ptitle, parseInt(time));
+					}
+				}					
+			}	
+		});
+	});		
+});
+
+    
+PodcastAnalytics = {};
+PodcastAnalytics.track = function(action, title, time, id) {
+	if (id > 0) {
+		var log_params = { id: id, action: 'podcast-' + action.toLowerCase() };
+		if (time != null) {
+			log_params['time'] = Math.round(time);
+		};
+	
+		jQuery.ajax({
+	        type: 'POST',
+	        url: ss_podcasting_scripts['ajaxurl'] + '?action=rm_podcast_log_action', 
+	        data: { data : log_params },
+	        //success: function(data) { console.log('success: ' + data); }, 
+	        error: function(xhr, ajaxOptions, thrownError) { console.log('error: ' + thrownError); } 	        
+	    });
+			
+		// google analytics
+		if (typeof(ga) == 'function') {		
+			if (time != null) {
+				ga('send', 'event', 'podcast', action, title, parseInt(time));
+			} else {
+				ga('send', 'event', 'podcast', action, title);
+			}
+		}
+	}
+};
+
+function podcastTitle(player) {
+	container = player.parents('.mejs-container[data-title]');
+	if (container.length > 0) {
+		return container.first().attr('data-title');
+	}
+}
+
+function podcastId(player) {
+	container = player.parents('.mejs-container[data-id]');
+	if (container.length > 0) {
+		return container.first().attr('data-id');
+	}
+}
+
+function trackDownload(title) {
+	if (title.length > 0) {
+		PodcastAnalytics.track('Download', title, null);
+	}
+	return true;
+}

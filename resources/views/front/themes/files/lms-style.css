@@ -1,0 +1,427 @@
+/**
+ * Styling for Rainmaker LMS shortcodes.
+ *
+ * @since 2.3
+ */
+
+/**
+ * LMS list directory shortcode
+ */
+
+.site-container ul.lms-list-items {
+    clear: both;
+}
+
+.site-container ul.lms-list-items,
+.site-container ul.lms-list-items ul.children,
+.site-container ul.lms-list-items li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-container ul.lms-list-items ul.children {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.site-container ul.lms-list-items ul.children:before {
+    border-left: 1px solid #ddd;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: -5px;
+    width: 10px;
+}
+
+.site-container ul.lms-list-items li a {
+    background: #fff;
+    border: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+.site-container ul.lms-list-items li a:hover {
+    background: #f5f5f5;
+}
+
+.site-container ul.lms-list-items li.current_courseware_item > a {
+    font-weight: bold;
+}
+
+.site-container ul.lms-list-items li a em {
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.site-container ul.lms-list-items li.courseware-complete > a {
+    color: #333;
+}
+
+.site-container ul.lms-list-items li a .lms-item-complete:before,
+.site-container ul.lms-list-items li a .lms-item-favorite:before {
+    display: inline-block;
+    font-family: 'dashicons';
+    line-height: 1;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-container ul.lms-list-items li a .lms-item-complete:before  {
+    content: '\f147';
+    font-size: 22px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.site-container ul.lms-list-items li a .lms-item-favorite:before {
+    content: '\f155';
+    color: #eece1a;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+.site-container .rainmaker-lms-complete,
+.site-container .rainmaker-lms-favorite {
+    box-shadow: none;
+	line-height: 1.5;
+	margin-bottom: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: auto;
+}
+
+.site-container .rainmaker-lms-complete:hover,
+.site-container .rainmaker-lms-favorite:hover {
+    box-shadow: none;
+}
+
+.site-container .lms-item-description {
+    border: none;
+    color: #666;
+    display: block;
+    line-height: 1.5;
+    padding: 0px 10px 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.site-container .lms-item-description p {
+    margin-bottom: 10px;
+}
+
+.site-container ul.lms-list-items li .lms-item-description a {
+    background: none;
+    display: inline;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.site-container .lms-item-description p:last-child {
+	margin-bottom: 0;
+}
+
+.site-container .lms-next-previous {
+    margin: 20px 0;
+}
+
+.site-container .no-access {
+    color: #666;
+    padding-left: 10px;
+}
+
+.site-container span.delayed-access-text,
+.site-container span.no-access-text,
+.site-container a.no-access-text {
+    background: #eee !important;
+    color: #888;
+    display: inline-block !important;
+    font-size: 12px;
+    font-style: regular;
+    font-weight: normal;
+    line-height: 17px;
+    margin: 0 10px !important;
+    padding: 4px 6px 3px !important;
+}
+
+.site-container a.no-access-text:hover {
+    color: #333;
+}
+
+.site-container span.delayed-access-text:before,
+.site-container span.no-access-text:before,
+.site-container a.no-access-text:before {
+    display: inline;
+    font-size: 14px;
+    font-family: 'dashicons';
+    margin-right: 4px;
+    opacity: 0.5;
+    position: relative;
+    top: 2px;
+}
+
+.site-container span.no-access-text:before,
+.site-container a.no-access-text:before {
+    content: "\f160";
+}
+
+.site-container span.delayed-access-text:before {
+    content: "\f469";
+}
+
+.site-container .lms-media-content a.button {
+    box-shadow: none;
+	line-height: 1.5;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.site-container .lms-media-content a.button:hover {
+    box-shadow: none;
+}
+
+/**
+ * LMS media embed shortcode
+ */
+
+.lms-media-content {
+    padding: 5%;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+
+ul.lms-media-downloads {
+    list-style: none;
+    margin: 0;
+}
+
+ul.lms-media-downloads li {
+    background-color: #f5f5f5;
+    list-style: none;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.lms-media-download-type,
+.lms-media-download-no-type {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 12px;
+    width: 45px;
+    font-weight: bold;
+}
+
+.lms-media-download-type {
+    background: #ddd;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.lms-media-download-link {
+    display: block;
+    margin: 8px 60px 0;
+}
+
+.lms-media-download-link .button {
+    font-size: 13px;
+    padding: 5px 15px 4px;
+}
+
+.lms-media-clear {
+    display: block;
+    float: none;
+    clear: both;
+    height: 0;
+}
+
+/* Not sure why... */
+.screen-reader-text {
+    display: block;
+    text-indent: -999em;
+}
+
+/* modal styling */
+
+.lms-mfp-slide {
+    position: absolute;
+    left: -9999em;
+}
+
+.lms-media-popup {
+    background: #fff;
+    padding: 40px;
+}
+
+/**
+ * LMS Dashboard
+ */
+
+.site-container ul.lms-dashboard a {
+    border: none;
+}
+
+.site-container ul.lms-dashboard,
+.site-container ul.lms-dashboard li {
+    border: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-container ul.lms-dashboard li {
+    background: #eee;
+    margin-bottom: 2%;
+    overflow: hidden;
+    padding: 5%;
+    position: relative;
+}
+
+.site-container ul.lms-dashboard li h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.site-container ul.lms-dashboard li small {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.site-container ul.lms-dashboard li .button {
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 3%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 7px 15px 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.site-container ul.lms-dashboard li .button:hover {
+    box-shadow: none;
+}
+
+.site-container ul.lms-dashboard li .description,
+.site-container ul.lms-dashboard li .description p {
+    border: none;
+    color: #666;
+    display: block;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.site-container ul.lms-dashboard li .description {
+    margin-top: 3%;
+}
+
+.site-container ul.lms-dashboard li .description p {
+    margin-bottom: 10px;
+}
+
+.site-container ul.lms-dashboard li .description p:last-child {
+    margin-bottom: 0;
+}
+
+.site-container ul.lms-dashboard li .lms-item-favorite:before,
+.site-container ul.lms-dashboard li.courseware-completed:before {
+    display: inline-block;
+    font-family: 'dashicons';
+    line-height: 1;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-container ul.lms-dashboard li .lms-item-favorite:before {
+    content: '\f155';
+    color: #eece1a;
+    font-size: 14px;
+    position: relative;
+    top: 5px;
+}
+
+.site-container ul.lms-dashboard li.courseware-completed:before {
+    background: #00ae7b;
+    border-radius: 50%;
+    content: '\f147';
+    color: #fff;
+    font-size: 24px;
+    height: 30px;
+    line-height: 32px;
+    margin-right: 5px;
+    margin-top: 2px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 30px;
+}
+
+.site-container ul.lms-dashboard.layout-list li.has-image .image {
+    float: left;
+    margin-right: 5%;
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+}
+
+.site-container ul.lms-dashboard.layout-list li.has-image .info {
+    float: right;
+    width: 65%;
+}
+
+.site-container ul.lms-dashboard.layout-grid li {
+    float: left;
+    margin: 0 2% 2% 0;
+    text-align: center;
+    width: 49%;
+}
+
+.site-container ul.lms-dashboard.layout-grid li .image {
+    margin-bottom: 10px;
+}
+
+.site-container ul.lms-dashboard.layout-grid li:nth-child(2n+2) {
+    margin-right: 0;
+}
+
+.site-container ul.lms-dashboard.layout-grid li:nth-child(2n+1) {
+    clear: left;
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .site-container ul.lms-dashboard.layout-list li.has-image .image,
+    .site-container ul.lms-dashboard.layout-list li.has-image .info,
+    .site-container ul.lms-dashboard.layout-grid li {
+        float: none;
+        margin: 0 0 2%;
+        width: 100%;
+    }
+
+    .site-container ul.lms-dashboard li.courseware-completed:before {
+        top: 5px;
+        right: 5px;
+    }
+
+}

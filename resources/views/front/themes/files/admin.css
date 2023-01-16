@@ -1,0 +1,29 @@
+#pbs-meta-box p,
+#pbs-meta-box h3.hndle span {
+	display: none;
+}
+
+#pbs-meta-box h3.hndle:after {
+	content: 'Visual Editor';
+	font-weight: 700;
+}
+
+#wp-admin-bar-gambit_builder_edit .ab-item,
+#wp-admin-bar-gambit_builder_edit .ab-item:hover {
+	background: none !important;
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+#wp-admin-bar-gambit_builder_edit .ab-item .ab-icon {
+	display: block !important;
+}
+
+#wp-admin-bar-gambit_builder_edit .ab-item .ab-icon:before {
+	content: "f" !important;
+    font: normal 21px/1 'rmui' !important;
+    top: -3px !important;
+}
+
+#wpadminbar.ct-widget--active.ct-ignition--editing #wp-admin-bar-pbs_help_docs {
+	display: none !important;
+}

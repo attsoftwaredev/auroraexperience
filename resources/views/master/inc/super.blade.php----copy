@@ -1,0 +1,479 @@
+<style>
+.avatar-sm img {
+    box-shadow: 0 4px 25px 0 rgb(168 180 208 / 10%);
+    border: 1px solid #d4d3d3;
+}
+.info span {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+span.user-level {
+    color: #000 !important;
+    text-transform: uppercase !important;
+}
+.sidebar .nav>.nav-item a
+{
+    padding:10px 20px;
+}
+.sidebar .nav>.nav-item a i {
+    color: #6c5ffc !important;
+}
+.sidebar .nav>.nav-item a p {
+    font-size: 18px;
+    font-weight: normal;
+    color: #282f53;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.avatar-sm {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+svg.bi.bi-chevron-right {
+    position: absolute;
+    right: 25px;
+}
+li.nav-item.submenu svg.bi.bi-chevron-right {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.sidebar .nav>.nav-item.active a i, .sidebar .nav-collapse li a .sub-item:hover {
+    color: #6c5ffc !important;
+}
+.sidebar .nav>.nav-item.active>a, .sidebar .nav>.nav-item.active a p, .sidebar .nav>.nav-item a:focus, .sidebar .nav>.nav-item>a:hover, .sidebar .nav>.nav-item a:focus i, .sidebar .nav>.nav-item a:hover i, .sidebar .nav>.nav-item a p:hover {
+    background: transparent;
+    color: #6c5ffc !important;
+}
+.sidebar .nav-collapse li.active>a
+{
+    font-weight:normal;
+    color: #6c5ffc !important;
+}
+.sidebar .nav-collapse li a .sub-item
+{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    margin-left:5px;
+}
+.sidebar, .sidebar .sidebar-wrapper
+{
+    width:270px !important;
+}
+.sidebar .nav-collapse li a .sub-item:before {
+    display:none;
+}
+svg.bi.bi-chevron-double-right {
+    margin-left: 30px;
+}
+.sidebar .nav>.nav-item a svg {
+    margin-right: 15px;
+}
+</style>
+
+<nav>
+	<ul class="nav">
+
+		<li class="nav-item">
+			<a href="{{ route('back.dashboard') }}">
+				<i class="fas fa-home"></i>
+				<p>{{ __('Dashboard') }}</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a data-toggle="collapse" href="#content">
+			   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6c5ffc" class="bi bi-stack" viewBox="0 0 16 16">
+	  <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"/>
+	  <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"/>
+	</svg>
+				<p>{{ __('Manage Website') }}</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#282f53" class="bi bi-chevron-right" viewBox="0 0 16 16">
+	  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg>
+			</a>
+			<div class="collapse" id="content">
+				<ul class="nav nav-collapse">
+				    <li>
+						<a class="sub-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+	  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+	  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg> <span class="sub-item">{{ __('Home') }}</span>
+						</a>
+					</li>
+					<li>  
+						<a class="sub-link" href="https://auroraexperiences.gigvie.com/admin/page/7/edit">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+	  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+	  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg> <span class="sub-item">{{ __('About') }}</span>
+						</a>
+					</li>
+					<li class="nav-item">
+                    <a class="sub-link" data-toggle="collapse" href="#itemsssw">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                        <span class="sub-item">{{ __('Services') }}</span>
+                    </a>
+                    <div class="collapse" id="itemsssw">
+                        <ul class="sub-link nav-collapse">
+                            <li>
+                                <a class="sub-link" href="{{ route('back.service.index') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('All Services') }}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Events') }}</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="sub-link" href="{{ route('back.item.index') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Digital Products') }}</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Lesson Library') }}</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Podcast') }}</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Live Broadcast') }}</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="sub-link" data-toggle="collapse" href="#itemsssww">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                        <span class="sub-item">{{ __('Get Involved') }}</span>
+                    </a>
+                    <div class="collapse" id="itemsssww">
+                        <ul class="sub-link nav-collapse">
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Feed') }}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Fund Raising') }}</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="sub-link" href="{{ route('back.post.index') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Blog') }}</span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="sub-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                                    <span class="sub-item">{{ __('Contact Us') }}</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                
+
+					<li>
+						<a class="sub-link" href="{{ route('back.post.index') }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+	  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+	  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg><span class="sub-item">{{ __('Manages Blogs') }}</span>
+						</a>
+					</li>
+					<li>
+						<a class="sub-link" href="{{ route('back.faq.index') }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+	  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+	  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg><span class="sub-item">{{ __('Manages Faqs') }}</span>
+						</a>
+					</li>
+					<li>
+						<a class="sub-link" href="{{ route('back.page.index') }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+	  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+	  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg><span class="sub-item">{{ __('Manages Pages') }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="nav-item">
+        <a data-toggle="collapse" href="#websettings">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            <p>{{ __('Website Settings') }}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#282f53" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+        </a>
+        <div class="collapse" id="websettings">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a class="sub-link" href="{{ route('back.setting.system') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg><span class="sub-item">{{ __('General Settings') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.setting.social') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg><span class="sub-item">{{ __('Social Login') }}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="sub-link" href="{{ route('back.setting.email') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg><span class="sub-item">{{ __('Email Settings') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.cookie.alert') }}">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Cookies Alert') }}</span></a>
+                </li>
+            </ul>
+        </div>
+    </li>
+	<li class="nav-item">
+        <a data-toggle="collapse" href="#ecommerce">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <p>{{ __('Manage Store') }}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#282f53" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+        </a>
+        <div class="collapse" id="ecommerce">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a class="sub-link" href="{{ route('back.item.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Products') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.category.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Product Categories') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.order.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Orders') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.user.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Customers') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.transaction.index') }}">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Transactions') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.tax.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Tax Settings') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.setting.payment') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Payment Settings') }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+	<li class="nav-item">
+        <a href="{{ route('back.ticket.index') }}">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6c5ffc" class="bi bi-ticket-detailed-fill" viewBox="0 0 16 16">
+  <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z"/>
+</svg>
+          <p>{{ __('Manages Tickets') }}</p></a>
+    </li>
+	<li class="nav-item">
+        <a data-toggle="collapse" href="#post">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6c5ffc" class="bi bi-file-earmark-medical-fill" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-3 2v.634l.549-.317a.5.5 0 1 1 .5.866L7 7l.549.317a.5.5 0 1 1-.5.866L6.5 7.866V8.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L5 7l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V5.5a.5.5 0 1 1 1 0zm-2 4.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zm0 2h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"/>
+</svg>
+            <p>{{ __('Manage Blogs') }}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#282f53" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+        </a>
+        <div class="collapse" id="post">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a class="sub-link" href="{{ route('back.bcategory.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Categories') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.post.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Blogs') }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+	<li class="nav-item">
+        <a data-toggle="collapse" href="#user">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <p>{{ __('My Profile') }}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#282f53" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+        </a>
+        <div class="collapse" id="user">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a class="sub-link" href="{{ route('back.profile') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Update Profile') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sub-link" href="{{ route('back.password') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#282f53" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg> <span class="sub-item">{{ __('Change Password') }}</span>
+                    </a>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+    </li>
+
+
+                
+    <li class="nav-item">
+        <a href="{{ route('back.logout') }}">
+            <i class="fas fa-power-off"></i>
+            <p>{{ __('Logout') }}</p>
+        </a>
+    </li>            
+    
+    <li class="nav-item">
+        <a href="{{ route('front.cache.clear') }}">
+            <i class="fas fa-broom"></i>
+            <p>{{ __('Cache Clear') }}</p>
+        </a>
+    </li>
+		</ul>
+	</nav>
+	
+	
+	@section('page-js-script')
+<script type="text/javascript">
+    $(document).ready(function() {
+        alert("Settings page was loaded");
+    });
+</script>
+@stop

@@ -1,0 +1,12 @@
+( function( jQuery ) {
+    'use strict';
+
+    jQuery('.premise-checkout-wrap form').on('submit', function() {
+        var _this = jQuery(this);
+        jQuery('<input>').attr('type', 'hidden')
+            .attr('name', 'premise-zero-spam')
+            .attr('value', '1')
+            .appendTo(_this);
+    });
+
+})( jQuery );

@@ -1,0 +1,78 @@
+/* Course */
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-course > a,
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-course > .no-access > span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Modules */
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-module > a,
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-module > .no-access > span {
+    background: #eee;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding: 10px 20px;
+}
+
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-module.current_courseware_item > a {
+   background: #333;
+   color: #fff;
+}
+
+/* Lessons */
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-module > ul.children {
+    margin: 0 0 20px 20px;
+}
+
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-lesson > a,
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-lesson > .no-access > span {
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+
+.site-container .lms-sidebar-nav ul.lms-list-items .courseware-lesson > a:hover {
+    background: none;
+}
+
+/* Complete */
+.site-container .lms-sidebar-nav.show-completed ul.lms-list-items .courseware-lesson.courseware-complete > a {
+    color: #00ae7b;
+}
+
+.site-container .lms-sidebar-nav.show-completed ul.lms-list-items .courseware-lesson.courseware-complete > a .lms-item-complete {
+    position: absolute;
+    left: -25px;
+    top: 10px;
+}
+
+.site-container .lms-sidebar-nav.show-completed ul.lms-list-items .courseware-module.courseware-complete > a {
+    background: #00ae7b;
+    border-color: #00ae7b;
+    color: #fff;
+}
+
+/* Numbering */
+.site-container .lms-sidebar-nav ul.lms-list-items small {
+    display: block;
+}
+
+/* No Access */
+.site-container .lms-sidebar-nav ul.lms-list-items .no-access {
+    padding-left: 0;
+}
+
+.site-container .lms-sidebar-nav span.delayed-access-text,
+.site-container .lms-sidebar-nav span.no-access-text,
+.site-container .lms-sidebar-nav a.no-access-text {
+    display: block !important;
+    margin: 5px 0 1px !important;
+}
+
+.site-container .lms-sidebar-nav .courseware-lesson > span.delayed-access-text,
+.site-container .lms-sidebar-nav .courseware-lesson > span.no-access-text,
+.site-container .lms-sidebar-nav .courseware-lesson > a.no-access-text {
+    margin-bottom: -7px !important;
+}

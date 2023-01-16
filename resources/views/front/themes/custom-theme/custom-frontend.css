@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Joti+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body
+{
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    overflow-x:hidden;
+}
+h1{
+    font-size:32px;
+}
+a{
+    color:rgba(214, 38, 38, 1);
+}
+p{
+    color:#545353;
+}
+
+/***header***/
+ul.navbar-nav li.dropdown:hover ul.dropdown-menu{ display: block; }
+a.navbar-brand {
+    font-family: 'Joti One', cursive;
+    color: rgba(214, 38, 38, 1);
+    font-size:32px;
+}
+a.nav-link, li.nav-item.dropdown {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    
+    color: #fff !important;
+}
+li.nav-item.dropdown a:hover {
+    text-decoration: none;
+}
+li.nav-item.dropdown a
+{
+    color:#fff;
+    text-decoration:none;
+}
+div#navbarCollapse {
+    justify-content: right;
+}
+ul.dropdown-menu li a {
+    color: #000 !important;
+    padding: 5px;
+}
+li.nav-item.nav-signIn {
+    background: #fff;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+    margin-left:8px;
+}
+li.nav-item.nav-signIn a {
+    color: rgba(214, 38, 38, 1) !important;
+}
+
+li.nav-item.nav-signIn a {
+    padding: 0px !important;
+}
+li.nav-item {
+    padding: 0 10px;
+}
+nav {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/**banner***/
+section#banner {
+    background: url(./images/sign-banner.png);
+    height: 270px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: -75px;
+}
+section#banner h1 {
+    padding-top: 10%;
+}
+
+
+/***Sign In***/
+section#formBlock {
+    width: 70%;
+    margin: 8% auto 12%;
+    border: 2px solid rgba(238, 238, 238, 1);
+}
+.loginForm {
+    padding: 50px;
+}
+.loginForm h2 {
+    font-family: 'Joti One', cursive;
+    color: rgba(214, 38, 38, 1);
+    font-size: 32px;
+}
+.loginForm h4 {
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+.loginForm input {
+    background: rgba(108, 108, 108, 0.15);
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+.loginForm button {
+    width: 100%;
+    background: rgba(214, 38, 38, 1);
+    border: 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.loginForm .form-check {
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.loginForm .form-check label {
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(108, 108, 108, 1);
+}
+.loginForm .form-check input {
+    margin: 6px 0 0 0px;
+}
+.loginForm p {
+    font-size: 15px;
+    color: rgba(108, 108, 108, 1);
+    margin: 0px;
+}
+.loginForm h3 {
+    padding: 30px 0;
+    font-size: 24px;
+    color: rgba(75, 75, 75, 1);
+}
+div#socialIcon {
+    width: 60%;
+    margin: 0 auto;
+}
+.socialIcon {
+    width: 20%;
+}
+.loginFormRight {
+    background: url(./images/team.png);
+    background-size: cover;
+    background-position: center center;
+    padding:35px;
+}
+.loginFormRight p, .signUpFormRight p {
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+/***sign-up***/
+li.nav-item.nav-signUp {
+    background: #D62626;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+}
+li.nav-item.nav-signUp a {
+    color:#fff !important;
+}
+
+li.nav-item.nav-signUp a {
+    padding: 0px !important;
+}
+.signUpFormRight, .contactFormRight {
+    background: url(./images/team-signup.png);
+    background-size: cover;
+    background-position: center center; 
+}
+.signUpFormRight h2, .loginFormRight h2 {
+    padding-top: 50%;
+}
+
+
+/***homepage***/
+.bannerText {
+    padding: 80px 20% 0px;
+}
+.bannerText h1 {
+    font-size: 50px;
+    padding: 0px 30px;
+}
+section#banner h1 {
+    padding-bottom: 20px;
+}
+.bannerText .form-group {
+    padding: 0px 5px;
+}
+.bannerText button {
+    background: #D62626;
+    border: 0px;
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+.bannerText i.bi.bi-search {
+    position: relative;
+    top: 31px;
+    left: 2%;
+    color: #6C6A6A;
+}
+input#exampleFormControlInput5 {
+    padding-left: 30px;
+}
+section#discoverSection h2 {
+    font-weight: 600;
+}
+span.wishlist {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    width: 50px;
+    padding: 2px 0px;
+}
+#discoverSection .card-overlay {
+    position: absolute;
+    top: 120px;
+}
+#discoverSection .card-body .logo {
+    position: absolute;
+    right: 10px;
+    top: 196px;
+    width: 10%;
+}
+#discoverSection .card-body ul li
+{
+    list-style: none;
+    display: inline-block;
+    background: rgba(224, 222, 222, 1);
+    border-radius: 50px;
+    padding: 0 8px;
+}
+#discoverSection .card-body ul li span.badge {
+    
+    font-size: 14px !important;
+    color: rgba(214, 38, 38, 1) !important;
+
+}
+#discoverSection .card-body ul {
+    padding: 0px;
+}
+#discoverSection .card-overlay .badge {
+    background: rgba(214, 38, 38, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+#discoverSection .card-overlay h5 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+#discoverSection .card-overlay .card-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+#discoverSection .card-body {
+    border: 1px solid rgba(224, 222, 222, 1);
+    padding: 15px 15px 5px;
+}
+section#pattyoncta h2::after {
+    content: "";
+    background: #A1A1A1;
+    height: 1px;
+    width: 15%;
+    display: block;
+    margin: 45px auto 0px;
+}
+section#howWork p {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+section#howWork ul li {
+    list-style: none;
+    background: url(./images/blue-check.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+section#howWork ul, section#subscriptionSection ul
+{
+    padding:0px;
+}
+section#logoSlider ul {
+    margin: 70px auto;
+    text-align: center;
+}
+
+section#logoSlider ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 8px;
+}
+#school .accordion-button:not(.collapsed), #school .accordion-button {
+    color: #29BBEA;
+    font-weight: 500;
+    background: #fff;
+}
+#school .accordion-item {
+    border: 0px;
+    border-top: 1px solid #a1a1a1;
+    border-bottom: 1px solid #a1a1a1;
+    border-radius: 0px !important;
+}
+section#subscriptionSection .card-text {
+    font-size: 15px;
+    color:#727272;
+}
+
+section#subscriptionSection button {
+    margin: 20px 0px 30px;
+    border-radius: 4px;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #D7D7D7;
+    padding: 7px 25px;
+    font-size: 18px;
+}
+section#subscriptionSection ul {
+border-top: 1px solid #d7d7d7;
+}
+section#subscriptionSection ul li {
+    background: url(./images/blue-check.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 26px;
+    list-style: none;
+    text-align: left;
+    padding: 20px 0 0px 20px;
+    color: #6C6A6A;
+    font-size: 15px;
+}
+section#subscriptionSection button:hover {
+    background: #1A73E8;
+    color: #fff;
+}
+.boxCta {
+    background: #F1F1F1;
+    border-radius: 15px;
+}
+section#whatNew .nav-link {
+    border: 1px solid #d7d7d7;
+    padding: 0 15px;
+    font-size: 15px;
+    margin: 5px;
+    height: 30px;
+    border-radius:2px;
+    color: #5C5C5C;
+}
+div#nav-tab {
+    border: 0px;
+}
+section#whatNew h3 {
+    font-size: 24px;
+    padding: 0 40px;
+}
+section#whatNew .tab-content h4 {
+    font-size: 18px;
+    padding: 6px 0 0px;
+    color: #454545;
+    font-weight: 500;
+}
+section#whatNew .tab-content p span.badge {
+    background: #D62626;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 0 8px;
+}
+section#whatNew .tab-content p span {
+    font-size: 15px;
+    color: #696767;
+}
+section#blog .card-text {
+    color: #6B6B6B;
+    font-size: 14px;
+}
+section#blog .card-title {
+    font-size: 17px;
+    font-weight: 500;
+}
+section#parallax-effect {
+    background: url(/resources/views/front/themes/custom-theme/images/parallax-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px 0px;
+    background-blend-mode: overlay;
+    background-color: #00000054;
+}
+section#parallax-effect h2, section#parallax-effect p {
+    color: #fff;
+}
+
+/**contact-us***/
+.contactForm input, .contactForm textarea {
+    background: rgba(108, 108, 108, 0.15);
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+.contactForm {
+    padding: 50px;
+}
+.contactForm button {
+    width: 100%;
+    background: rgba(214, 38, 38, 1);
+    border: 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.contactForm button:hover{
+    background:#000;
+}
+section#contactformBlock {
+    width: 70%;
+    margin: 8% auto 8%;
+    border: 2px solid rgba(238, 238, 238, 1);
+}
+
+
+/***about-us***/
+
+.aboutBanner {
+    background: url(./images/about-bg.png) !important;
+    height: 360px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    margin-top: -75px;
+}
+.aboutBanner h1 {
+    text-align: right;
+    padding-right: 20%;
+    padding-top: 10% !important;
+}
+section#aboutUs h5 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #545353;
+    line-height: 21px;
+    padding: 10px 0 30px;
+}
+section#offerSection .card {
+    border: 0px;
+    margin: 30px 25px;
+}
+section#offerSection .card img {
+    width: 20%;
+    margin: 0 auto 15px;
+}
+section#offerSection .card-title {
+    font-size: 20px;
+}
+section#offerSection .card {
+    padding: 20px;
+}
+section#offerSection h3 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+/***FAQ***/
+section#faqSection {
+    margin: 5% auto;
+    padding: 0 10%;
+}
+#faqSection .accordion-button:not(.collapsed) {
+    background: #d6262626;
+    color: #d62626;
+    font-weight: 500;
+}
+.accordion-button:not(.collapsed)::after {
+    background: url(./images/red-chevron.png);
+    transform: rotate(360deg) !important;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #d62626;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+/***service***/
+.learnBtn {
+    width: 100%;
+    background: #d62626;
+    border: 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.learnBtn:hover {
+    background: #000;
+}
+section#services .card {
+    box-shadow: 0px 0px 6px #ddd;
+    border: 0px;
+}
+
+/***events***/
+#eventCard a.box {
+	color: #fff;
+	display: block;
+	width: 400px;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+    background-blend-mode: overlay;
+    background-color: #0000007d !important;
+}
+
+#eventCard .content {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	padding: 0 4em;
+	z-index: 2;
+	height: 3em;
+	transition: all .2s ease;
+}
+
+#eventCard a:hover .content {
+	height: 8em;
+	transition: all .2s ease;
+}
+
+#eventCard a:hover p{
+	height: 3em;
+	opacity: 1;
+	visibility: visible;
+	transition: all .2s ease;
+}
+
+#eventCard .link {
+	height: 1.5em;
+	line-height: 1.5;
+	transition: all .2s ease;
+	display: block;
+	font-size: 0.85em;
+	font-style: italic;
+}
+
+#eventCard a:hover .link {
+	transition: all .2s ease;
+}
+#eventCard p.description {
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	margin: 5px;
+	line-height: 1.5em;
+	
+}
+
+/***footer***/
+/*footer {
+    background: #131313;
+    padding: 50px;
+    color: #929292;
+}*/
+footer ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+footer ul li {
+    padding: 0 0 15px;
+}
+footer ul li a, footer p, footer a {
+    text-decoration: none !important;
+    color: #929292;
+}
+footer ul li a:hover, footer a:hover {
+    color: #fff;
+}
+
+
+
+@media only screen and (max-width: 1024px)
+{
+    #eventCard a.box
+    {
+        width:300px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    div#navbarCollapse ul {
+        padding: 0 12px;
+    }
+    .navbar {
+        background: #000;
+    }
+    li.nav-item.nav-btn {
+        margin: 0 15px 25px;
+    }
+    .navbar-toggler-icon {
+        height: auto;
+        font-size: 35px;
+    }
+    li.nav-item.nav-signUp, li.nav-item.nav-signIn
+    {
+        margin:10px;
+    }
+    nav.navbar .container-fluid {
+        padding: 0px;
+    }
+    a.navbar-brand {
+        padding: 0 10px;
+    }
+    nav {
+        width: 100%;
+        margin: 0 auto;
+    }
+    section#contactformBlock {
+        width: 85%;
+        margin: 5% auto;
+    }
+    div#socialIcon {
+        width: 85%;
+        margin: 0 auto;
+    }
+    section#offerSection .card {
+       padding:0px;
+    }
+    section#offerSection .card {
+        border: 0px;
+        margin: 15px 0px;
+    }
+    section#banner h1, .aboutBanner h1 {
+        padding-top: 18% !important;
+    }
+    #eventCard a.box
+    {
+        width:335px;
+    }
+}    
+
+@media only screen and (max-width: 767px) {
+
+    .input-group {
+        width: 75%;
+        margin: 20% auto;
+    }
+    .form-group.has-search {
+        width: 63%;
+    }
+    section#banner h1, .aboutBanner h1 {
+        padding-top: 40% !important;
+    }
+    section#privacySection {
+        padding: 0px !important;
+    }
+    section#formBlock
+    {
+        width:80%;
+    }
+    div#socialIcon
+    {
+        width:100%;
+    }
+    footer .col {
+        margin-bottom: 40px;
+        padding: 0px;
+    }
+    footer .row {
+        display: inline;
+    }
+    .bannerText
+    {
+        padding:0px 20px;
+    } 
+    .bannerText button {
+        margin: 20px 30px;
+    }
+    section#logoSlider ul li {
+        margin: 15px 0;
+    }
+    
+    section#logoSlider ul {
+        padding: 0px;
+    }
+    section#subscriptionSection p {
+        padding: 0px !important;
+        width: 100% !important;
+    }
+    section#subscriptionSection .card {
+        margin-bottom: 20px !important;
+        height: auto !important;
+    }
+    section#ctaBox .container {
+        width: 100% !important;
+    }
+    #nav-tabContent .col-md-2 {
+        width: 50%;
+    }
+    button.navbar-toggler:focus {
+        border: 0px !important;
+        outline: 0px !important;
+        box-shadow: none;
+    }
+    table.table {
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    #eventCard a.box {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+}

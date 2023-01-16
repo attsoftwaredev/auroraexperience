@@ -1,0 +1,68 @@
+/**
+ * Javascript functionality for LMS Navigation Module.
+ *
+ * @uses jQuery
+ * 
+ * @since 2.3.4
+ */
+
+window.lms_navigation = (function( window, document, jQuery ){
+	'use strict';
+
+	var app = {
+
+		/**
+		 * Add event callbacks.
+		 * 
+		 * @since 2.3.4
+		 * 
+		 * @return {void}
+		 */
+		init: function() {
+			jQuery( '.lms-sidebar-nav.collapse .courseware-module > a' ).on( 'click', app.modules_click );
+		},
+
+		/**
+		 * Callback for jQuery 'click' event.
+		 *
+		 * 1. If the current module does not have any children, move on.
+		 * 2. Close all module children (lessons) for the ancestor class (course).
+		 * 3. Toggle the current module's children (lessons)
+		 * 
+		 * @since 2.3.4
+		 * 
+		 * @param  {object} event The current event object.
+		 * @return {void}
+		 */
+		modules_click: function( event ) {
+			var $this     = jQuery( event.currentTarget ),
+				$parent   = $this.parent( 'li.courseware-module' ),
+				$children = $parent.find( 'ul.children:first' ),
+				$visible  = $children.is( ':visible' );
+
+			//* if module doesn't have child, return
+			if ( ! $children.length ) {
+				return;
+			}
+
+			//* prevent default link from opening
+			event.preventDefault();
+
+			//* collapse module children
+			$children.stop( true ).slideUp();
+
+			//* if current target children not visible, show them
+			if ( ! $visible ) {
+				$children.stop( true ).slideDown();
+			}
+		}
+
+	};
+
+	//* let jQuery initialize
+	jQuery( document ).ready( app.init );
+
+	//* return the object
+    return app;
+    
+})( window, document, jQuery );

@@ -1,0 +1,875 @@
+@includeIf('front.themes.custom-theme.header')
+<style>
+  section#banner h1 {
+  padding-top: 5%;
+}
+section#banner {
+  height: auto;
+  padding-bottom: 80px;
+}
+</style>
+<section id="banner">
+    <div class="bannerText">
+	<h1 class="text-center text-white">Search over 730,000 creators on Pattyon</h1>
+    <p class="text-white text-center">Access anywhere anytime</p>
+    <p class="text-white text-center">Search the content from the largest community of schools</p>
+    <form>
+        <div class="row mb-4">
+          <div class="form-group col-md-9">
+            <i class="bi bi-search"></i>
+            <input id="exampleFormControlInput5" type="email" placeholder="Find a school you love" class="form-control form-control-underlined">
+          </div>
+          <div class="form-group col-md-3">
+            <button type="submit" class="btn btn-primary rounded btn-block shadow-sm">Search</button>
+          </div>
+        </div>
+        </form>
+    </div>
+</section>
+
+<section id="discoverSection" class="py-5">
+  <div class="container">
+    <h2 class="text-center pt-5 pb-4">Discover Our Gratified Schools Content</h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mx-auto mb-5" style="width: 20rem;">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/Massachusetts-Technology.png') }}" class="card-img-top" alt="Massachusetts-Technology">
+          <div class="card-body">
+            <span class="wishlist text-white text-center"><i class="bi bi-heart-fill"></i> 16</span>
+            <div class="card-overlay text-white">
+            <span class="badge text-bg-danger">FEATURED</span>
+            <h5 class="card-title">Massachusetts Technology</h5>
+            <p class="card-text">Massachusetts</p>
+          </div>
+            <img class="logo" src="{{ asset('resources/views/front/themes/custom-theme/images/Massachusetts-Technology-logo.png') }}">
+           <ul>
+            <li><span class="badge text-bg-secondary">Level 1</span></li>
+            <li><span class="badge text-bg-secondary">Level 2</span></li>
+            <li><span class="badge text-bg-secondary">Level 3</span></li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mx-auto mb-5" style="width: 20rem;">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/Columbia-University.png') }}" class="card-img-top" alt="Columbia-University">
+          <div class="card-body">
+            <span class="wishlist text-white text-center"><i class="bi bi-heart-fill"></i> 89</span>
+            <div class="card-overlay text-white">
+            <span class="badge text-bg-danger">FEATURED</span>
+            <h5 class="card-title">Columbia University</h5>
+            <p class="card-text">New York</p>
+          </div>
+            <img class="logo" src="{{ asset('resources/views/front/themes/custom-theme/images/Columbia-University-logo.png') }}">
+           <ul>
+            <li><span class="badge text-bg-secondary">Level 1</span></li>
+            <li><span class="badge text-bg-secondary">Level 2</span></li>
+            <li><span class="badge text-bg-secondary">Level 3</span></li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mx-auto mb-5" style="width: 20rem;">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/Yale-University.png') }}" class="card-img-top" alt="Yale-University">
+          <div class="card-body">
+            <span class="wishlist text-white text-center"><i class="bi bi-heart-fill"></i> 99</span>
+            <div class="card-overlay text-white">
+            <span class="badge text-bg-danger">FEATURED</span>
+            <h5 class="card-title">Yale University</h5>
+            <p class="card-text">Connecticut</p>
+          </div>
+            <img class="logo" src="{{ asset('resources/views/front/themes/custom-theme/images/Yale-University-logo.png') }}">
+           <ul>
+            <li><span class="badge text-bg-secondary">Level 1</span></li>
+            <li><span class="badge text-bg-secondary">Level 2</span></li>
+            <li><span class="badge text-bg-secondary">Level 3</span></li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mx-auto mb-5" style="width: 20rem;">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/Rice-University.png') }}" class="card-img-top" alt="Rice-University">
+          <div class="card-body">
+            <span class="wishlist text-white text-center"><i class="bi bi-heart-fill"></i> 76</span>
+            <div class="card-overlay text-white">
+            <span class="badge text-bg-danger">FEATURED</span>
+            <h5 class="card-title">Rice University</h5>
+            <p class="card-text">Texas</p>
+          </div>
+            <img class="logo" src="{{ asset('resources/views/front/themes/custom-theme/images/Rice-University-logo.png') }}">
+           <ul>
+            <li><span class="badge text-bg-secondary">Level 1</span></li>
+            <li><span class="badge text-bg-secondary">Level 2</span></li>
+            <li><span class="badge text-bg-secondary">Level 3</span></li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mx-auto mb-5" style="width: 20rem;">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/University-of-Chicago.png') }}" class="card-img-top" alt="University-of-Chicago">
+          <div class="card-body">
+            <span class="wishlist text-white text-center"><i class="bi bi-heart-fill"></i> 86</span>
+            <div class="card-overlay text-white">
+            <span class="badge text-bg-danger">FEATURED</span>
+            <h5 class="card-title">University of Chicago</h5>
+            <p class="card-text">Illinois</p>
+          </div>
+            <img class="logo" src="{{ asset('resources/views/front/themes/custom-theme/images/University-of-Chicago-logo.png') }}">
+           <ul>
+            <li><span class="badge text-bg-secondary">Level 1</span></li>
+            <li><span class="badge text-bg-secondary">Level 2</span></li>
+            <li><span class="badge text-bg-secondary">Level 3</span></li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mx-auto mb-5" style="width: 20rem;">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/Brown.png') }}" class="card-img-top" alt="Brown">
+          <div class="card-body">
+            <span class="wishlist text-white text-center"><i class="bi bi-heart-fill"></i> 99</span>
+            <div class="card-overlay text-white">
+            <span class="badge text-bg-danger">FEATURED</span>
+            <h5 class="card-title">Brown</h5>
+            <p class="card-text">Rhode Island</p>
+          </div>
+            <img class="logo" src="{{ asset('resources/views/front/themes/custom-theme/images/Brown-logo.png') }}">
+           <ul>
+            <li><span class="badge text-bg-secondary">Level 1</span></li>
+            <li><span class="badge text-bg-secondary">Level 2</span></li>
+            <li><span class="badge text-bg-secondary">Level 3</span></li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+  </div> 
+  </div>
+</section> 
+
+<section id="parallax-effect">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-left pb-5">Where does it come from?</h2>
+                <p class="text-left">Lorem ipsum dolor sit amet consectetur adipiscingn elit do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit do eiusmod tempor incididunt ut labore</p>
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ asset('resources/views/front/themes/custom-theme/images/school-lib.jpeg') }}" alt="how-work" class="pb-4 w-100 mx-auto">
+            </div>    
+        </div>    
+    </div>    
+</section>    
+
+<section id="pattyoncta">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 py-5">
+      <h2 class="text-center px-5">Pattyon mission is to <span style="color:#4285F4;">organize</span> the<br> creator’s <span style="color:#D62626;">information</span> and make it<br> <span style="color:#34A853;">universally accessible</span> and <span style="color:#F9AB00;">useful</span>.</h2>
+      </div>
+     </div> 
+  </div>  
+</section>  
+
+<section id="howWork">
+  <div class="container">
+    <h2 class="text-center pb-5">What is Pattyon and how it works?</h2>
+    <div class="row">
+      <div class="col-md-8 col-12">
+        <img src="{{ asset('resources/views/front/themes/custom-theme/images/how-work.png') }}" alt="how-work" class="pb-4 w-100 mx-auto">
+        <h3 class="text-center">Pattyon Is A Website And create on pattyon For Schools.</h3>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipiscingn elit do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet consectetur adipiscing
+          elit do eiusmod tempor incididunt ut labore</p>
+         <ul> 
+          <li>Nam quis sapien mollis, consequat ex a, congue ligula. Lorem Ipsum has been the industry’s standard.</li>
+          <li>Phasellus ut nulla ac elit eleifend tempor. Praesent ornare dui in neque finibus consequat.</li>
+          <li>Sed a velit sit amet nibh mollis lacinia.</li>
+        </ul>  
+            
+      </div>
+      <div class="col-md-3 col-12"> 
+        <img src="{{ asset('resources/views/front/themes/custom-theme/images/web-flow.png') }}" style="width:350px;"> 
+      </div>  
+    </div>  
+  </div>  
+</section>  
+
+<section id="parallax-effect">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('resources/views/front/themes/custom-theme/images/school-lib.jpeg') }}" alt="how-work" class="pb-4 w-100 mx-auto">
+            </div> 
+            <div class="col-md-6">
+                <h2 class="text-left pb-5">Where does it come from?</h2>
+                <p class="text-left">Lorem ipsum dolor sit amet consectetur adipiscingn elit do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit do eiusmod tempor incididunt ut labore</p>
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            </div>
+               
+        </div>    
+    </div>    
+</section>
+
+<section id="subscriptionSection" class="py-5">
+  <div class="container">
+    <h2 class="text-center pt-5 pb-3">Register your school and create subscriptions</h2>
+    <p class="text-center px-5 w-75 mx-auto pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+
+  <div class="row row-flex">
+    <div class="col-md-3">
+      <div class="card mx-auto mb-5 h-100">
+          <div class="card-body text-center px-3 pt-5">
+            <h5 class="card-title">Starter</h5>
+            <p><span style="color:#2BA2E5;font-size:35px;">$5</span> USD</p>
+            <p class="card-text">/ user / month</p>
+            <button type="button" class="btn btn-outline-secondary">Get Started</button>
+           <ul>
+            <li>Sed a velit sit amet nibh mollis lacinia.</li>
+            <li>Aliquam vitae justo non justo pharetra porta.</li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card mx-auto mb-5 h-100">
+          <div class="card-body text-center px-3 pt-5">
+            <h5 class="card-title">Core</h5>
+            <p><span style="color:#2BA2E5;font-size:35px;">$10</span> USD</p>
+            <p class="card-text">/ user / month</p>
+            <button type="button" class="btn btn-outline-secondary">Get Started</button>
+           <ul>
+            <li><strong>Advanced</strong> Nam quis sapien mollis, consequat</li>
+            <li>Quisque sit amet metus vitae libero</li>
+            <li><strong>Phasellus ut nulla ac elit eleifend tempor.</strong></li>
+            <li>Nulla eu sapien rutrum, ultrices libero in</li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card mx-auto mb-5 h-100">
+          <div class="card-body text-center px-3 pt-5">
+            <h5 class="card-title">Enterprise Standard</h5>
+            <p><span style="color:#2BA2E5;font-size:35px;">$15</span> USD</p>
+            <p class="card-text">Request a quote</p>
+            <button type="button" class="btn btn-outline-secondary">Contact Sales</button>
+           <ul>
+            <li>Phasellus at tortor quis nulla egestas euismod.</li>
+            <li>Suspendisse eu velit sed ligula varius dapibus efficit</li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card mx-auto mb-5 h-100">
+          <div class="card-body text-center px-3 pt-5">
+            <h5 class="card-title">Enterprise Plus</h5>
+            <p><span style="color:#2BA2E5;font-size:35px;">$25</span> USD</p>
+            <p class="card-text">Request a quote</p>
+            <button type="button" class="btn btn-outline-secondary">Contact Sales</button>
+           <ul>
+            <li>Phasellus at tortor quis nulla egestas euismod.</li>
+            <li>Aenean aliquet nulla vel nulla elementum, vel vehicula velit elementum.
+              Curabitur sollicitudin massa. </li>
+          </ul>  
+          </div>
+        </div>
+    </div>
+  </div> 
+  </div>
+  </section>
+
+<section id="ctaBox">
+  <div class="container w-50 mx-auto my-5 ">
+    <div class="boxCta text-center p-5">
+      <h3 class="text-center mb-3">Ready to start your Membership?</h3>
+      <button type="button" class="btn btn-primary text-white px-4">Get Started</button>
+    </div> 
+  </div>
+</section>
+
+<section id="whatNew" class="pb-5">
+  <div class="container">
+  <div class="row">
+    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+      <h3>What's New</h3>
+      <button class="nav-link active" id="nav-arts-tab" data-bs-toggle="tab" data-bs-target="#nav-arts" type="button" role="tab" aria-controls="nav-arts" aria-selected="true">Art & Entertainment</button>
+      <button class="nav-link" id="nav-bars-tab" data-bs-toggle="tab" data-bs-target="#nav-bars" type="button" role="tab" aria-controls="nav-bars" aria-selected="false">Bars</button>
+      <button class="nav-link" id="nav-breweries-tab" data-bs-toggle="tab" data-bs-target="#nav-breweries" type="button" role="tab" aria-controls="nav-breweries" aria-selected="false">Breweries</button>
+      <button class="nav-link" id="nav-food-tab" data-bs-toggle="tab" data-bs-target="#nav-food" type="button" role="tab" aria-controls="nav-food" aria-selected="false">Food</button>
+      <button class="nav-link" id="nav-lodging-tab" data-bs-toggle="tab" data-bs-target="#nav-lodging" type="button" role="tab" aria-controls="nav-lodging" aria-selected="false">Lodging</button>
+      <button class="nav-link" id="nav-nightlife-tab" data-bs-toggle="tab" data-bs-target="#nav-nightlife" type="button" role="tab" aria-controls="nav-nightlife" aria-selected="false">Nightlife</button>
+      <button class="nav-link" id="nav-restaurants-tab" data-bs-toggle="tab" data-bs-target="#nav-restaurants" type="button" role="tab" aria-controls="nav-restaurants" aria-selected="false">Restaurants</button>
+      <button class="nav-link" id="nav-steak-tab" data-bs-toggle="tab" data-bs-target="#nav-steak" type="button" role="tab" aria-controls="nav-steak" aria-selected="false">Steak House</button>
+      <button class="nav-link" id="nav-entertainment-tab" data-bs-toggle="tab" data-bs-target="#nav-entertainment" type="button" role="tab" aria-controls="nav-entertainment" aria-selected="false">Art & Entertainment</button>
+      <button class="nav-link" id="nav-bar-tab" data-bs-toggle="tab" data-bs-target="#nav-bar" type="button" role="tab" aria-controls="nav-bar" aria-selected="false">Bars</button>
+      <button class="nav-link" id="nav-brewerie-tab" data-bs-toggle="tab" data-bs-target="#nav-brewerie" type="button" role="tab" aria-controls="nav-brewerie" aria-selected="false">Breweries</button>
+      <button class="nav-link" id="nav-foods-tab" data-bs-toggle="tab" data-bs-target="#nav-foods" type="button" role="tab" aria-controls="nav-foods" aria-selected="false">Food</button>
+      <button class="nav-link" id="nav-lodg-tab" data-bs-toggle="tab" data-bs-target="#nav-lodg" type="button" role="tab" aria-controls="nav-lodg" aria-selected="false">Lodging</button>
+      <button class="nav-link" id="nav-night-tab" data-bs-toggle="tab" data-bs-target="#nav-night" type="button" role="tab" aria-controls="nav-night" aria-selected="false">Nightlife</button>
+      <button class="nav-link" id="nav-rest-tab" data-bs-toggle="tab" data-bs-target="#nav-rest" type="button" role="tab" aria-controls="nav-rest" aria-selected="false">Restaurants</button>
+      <button class="nav-link" id="nav-house-tab" data-bs-toggle="tab" data-bs-target="#nav-house" type="button" role="tab" aria-controls="nav-house" aria-selected="false">Steak House</button>
+      <button class="nav-link" id="nav-life-tab" data-bs-toggle="tab" data-bs-target="#nav-life" type="button" role="tab" aria-controls="nav-life" aria-selected="false">Nightlife</button>
+      <button class="nav-link" id="nav-rests-tab" data-bs-toggle="tab" data-bs-target="#nav-rests" type="button" role="tab" aria-controls="nav-rests" aria-selected="false">Restaurants</button>
+    </div>
+
+  <div class="tab-content p-3" id="nav-tabContent">
+    <div class="tab-pane fade active show" id="nav-arts" role="tabpanel" aria-labelledby="nav-arts-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-bars" role="tabpanel" aria-labelledby="nav-bars-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-breweries" role="tabpanel" aria-labelledby="nav-breweries-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-food" role="tabpanel" aria-labelledby="nav-food-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-lodging" role="tabpanel" aria-labelledby="nav-lodging-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-nightlife" role="tabpanel" aria-labelledby="nav-nightlife-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-restaurants" role="tabpanel" aria-labelledby="nav-restaurants-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-steak" role="tabpanel" aria-labelledby="nav-steak-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-entertainment" role="tabpanel" aria-labelledby="nav-entertainment-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-bar" role="tabpanel" aria-labelledby="nav-bar-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-brewerie" role="tabpanel" aria-labelledby="nav-brewerie-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-foods" role="tabpanel" aria-labelledby="nav-foods-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-lodg" role="tabpanel" aria-labelledby="nav-lodg-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-night" role="tabpanel" aria-labelledby="nav-night-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-rest" role="tabpanel" aria-labelledby="nav-rest-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-house" role="tabpanel" aria-labelledby="nav-house-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-life" role="tabpanel" aria-labelledby="nav-life-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>   
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+    <div class="tab-pane fade" id="nav-rests" role="tabpanel" aria-labelledby="nav-rests-tab">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-28.png') }}">
+          <h4>Stanford University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div>  
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-33.png') }}">
+          <h4>Harvard University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-29.png') }}">
+          <h4>Yale University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-30.png') }}">
+          <h4>Columbia University</h4>
+          <p><span>Price $20</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-31.png') }}">
+          <h4>Duke University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+        <div class="col-md-2">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/rectangle-32.png') }}">
+          <h4>Princeton University</h4>
+          <p><span>Price $50</span><span class="badge">SUBSCRIBE</span></p>
+        </div> 
+      </div>  
+    </div>
+  </div>
+  </div>
+</section>  
+
+
+<section id="blog" class="py-5">
+  <div class="container">
+    <h2>Blog - Future Of Marketing </h2>
+    <p class="w-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+      Phasellus ut nulla ac elit eleifend tempor.</p>
+    <div class="row">
+      <div class="col-md-6 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/Perspective.png') }}" class="card-img-top" alt="Perspective">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Curabitur volutpat mi eu lorem tincidunt tincidunt quis consectetur nunc.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/blog-2.png') }}" class="card-img-top" alt="Blog 2">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Aenean aliquet nulla vel nulla elementum.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/blog-3.png') }}" class="card-img-top" alt="Blog 3">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Nunc id magna at ex scelerisque faucibus at.</h5>
+          </div>
+        </div>
+      </div>  
+      <div class="col-md-3 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/blog-4.png') }}" class="card-img-top" alt="Blog 3">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Curabitur sollicitudin massa eget rutrum viverra.</h5>
+          </div>
+        </div>
+      </div>  
+      <div class="col-md-3 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/blog-5.png') }}" class="card-img-top" alt="Blog 3">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Cras non nulla nec libero laoreet mattis.</h5>
+          </div>
+        </div>
+      </div>  
+      <div class="col-md-3 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/blog-6.png') }}" class="card-img-top" alt="Blog 3">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Phasellus at tortor quis nulla egestas euismod.</h5>
+          </div>
+        </div>
+      </div>  
+      <div class="col-md-3 pb-3">
+        <div class="card">
+          <img src="{{ asset('resources/views/front/themes/custom-theme/images/blog-7.png') }}" class="card-img-top" alt="Blog 3">
+          <div class="card-body">
+            <p class="card-text">Perspective</p>
+            <h5 class="card-title">Suspendisse eu velit sed ligula varius dapibu</h5>
+          </div>
+        </div>
+      </div>      
+    </div>    
+  </div>  
+</section> 
+@includeIf('front.themes.custom-theme.footer')

@@ -1,0 +1,46 @@
+/* Reset default LMS styling */
+.site-container .lms-sidebar-nav a {
+	outline: none;
+	text-decoration: none;
+}
+
+.site-container .lms-sidebar-nav ul.lms-list-items ul,
+.site-container .lms-sidebar-nav ul.lms-list-items li,
+.site-container .lms-sidebar-nav ul.lms-list-items li a,
+.site-container .lms-sidebar-nav ul.lms-list-items ul.children {
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-shadow: none;
+}
+
+.site-container .lms-sidebar-nav ul.lms-list-items ul.children:before,
+.site-container .lms-sidebar-nav ul.lms-list-items li:before {
+    display: none;
+}
+
+/* Hide course title */
+.lms-sidebar-nav.hide-course-title .courseware-course > a {
+	display: none;
+}
+
+/* Hide other modules */
+.lms-sidebar-nav.hide-other-modules .courseware-course > ul.children > .courseware_item {
+	display: none;
+}
+
+.lms-sidebar-nav.hide-other-modules .courseware-course ul.children > .courseware-module.current_courseware_parent,
+.lms-sidebar-nav.hide-other-modules .courseware-course ul.children > .courseware-module.current_courseware_item {
+	display: block;
+}
+
+/* Collapse all modules by default */
+.lms-sidebar-nav.collapse .courseware-module ul.children {
+	display: none;	
+}
+
+.lms-sidebar-nav.collapse .current_courseware_ancestor.courseware-module ul.children,
+.lms-sidebar-nav.collapse .current_courseware_item.courseware-module ul.children {
+	display: block;
+}

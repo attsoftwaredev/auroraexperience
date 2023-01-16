@@ -1,0 +1,5 @@
+[02-Dec-2022 05:54:03 UTC] PHP Warning:  require_once(stripe-php/init.php): Failed to open stream: No such file or directory in /home/nzocgvvlkplb/public_html/auroraexperiences.gigvie.com/stripe/submit.php on line 15
+[02-Dec-2022 05:54:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'stripe-php/init.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nzocgvvlkplb/public_html/auroraexperiences.gigvie.com/stripe/submit.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/nzocgvvlkplb/public_html/auroraexperiences.gigvie.com/stripe/submit.php on line 15

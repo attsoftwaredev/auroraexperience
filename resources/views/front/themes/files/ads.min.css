@@ -1,0 +1,13 @@
+.adthrive-ad {
+clear: both;
+overflow: visible !important;
+}
+
+.adthrive-sidebar {
+width: 320px !important;
+margin-left: -20px !important;
+}
+
+.adthrive-sidebar.adthrive-stuck {
+margin-top: 130px;
+}
